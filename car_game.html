@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Car Game</title>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css" integrity="sha384-REHJTs1r2ErKBuJB0fCK99gCYsVjwxHrSU0N7I1zl9vZbggVJXRMsv/sLlOAGb4M" crossorigin="anonymous">
+    <link rel="stylesheet" href="resources/car_style.css">
+</head>
+
+<body>
+<div class="score"></div>
+
+<div class="game">
+    <div class="startScreen">
+<!--from tic-tac-->
+        <div class="winning-message" id="winningMessage">
+
+            <a href="index.html">
+                <img src="resources/images/LogoBack.png" alt="logo" class="logos logoFixed">
+            </a>
+
+            <div data-winning-message-text>Use arrow key to move<br> If you hit another car you will lose</div>
+            <button id="restartButton">Start</button>
+        </div>
+        <!--end tic-tac-->
+    </div>
+    <div class="gameArea hide">
+        <a href="index.html">
+            <img src="resources/images/LogoBack.png" alt="logo" class="logos logoFixed">
+        </a>
+        <div class="left-arrow arrow"><i class="fas fa-arrow-left myArrowL"></i></div>
+        <div class="right-arrow arrow"><i class="fas fa-arrow-right myArrowR"></i></div>
+
+        <div class="rode"></div>
+    </div>
+</div>
+
+
+
+
+
+    <script src="car_js.js"></script>
+
+</body>
+
+</html>
