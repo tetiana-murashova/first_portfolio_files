@@ -25,49 +25,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,300&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="resources/style_portfolio.css">
-    <script>
-        function submitToAPI(e) {
-            e.preventDefault();
 
-            var name = document.getElementById("fname").value;
-
-            var desc = document.getElementById("subject").value;
-            if (name == "" || desc == "") {
-                alert("Please Fill All Required Field");
-                return false;
-            }
-
-            if (name !== '5') {
-                alert("You make a mistake");
-                return false;
-            }
-
-
-            var data = {
-                name: name,
-                desc: desc
-            };
-
-            var xmlhttp = new XMLHttpRequest();
-            xmlhttp.open("POST", " https://ykcnj9w206.execute-api.ap-southeast-2.amazonaws.com/prod/email");
-            xmlhttp.setRequestHeader("Content-Type", "application/json");
-            xmlhttp.send(JSON.stringify(data));
-            xmlhttp.onreadystatechange = function() {
-                if (xmlhttp.readyState === 4) {
-                    var response = JSON.parse(xmlhttp.responseText);
-                    if (xmlhttp.status === 200) {
-                        console.log('successful');
-                        document.getElementById("contact-form").innerHTML = "<h1>Thank you for your message/feedback<br>I will get back to you soon!</h1>";
-                    } else {
-                        console.log('failed');
-                    }
-                }
-            }
-
-            document.getElementById('contact-form').reset();
-
-        }
-    </script>
     <script src="script.js" defer></script>
 </head>
 
@@ -177,32 +135,6 @@
 
     <section class="section--skills__wrapper">
         <h2 class="section--skills__title">SKILLS</h2>
-        <!--    <div class="block-skills">-->
-        <!--        <div class="box-skill">-->
-        <!--            <i class="fas fa-laptop-code"></i>-->
-        <!--            <h3>Professional</h3>-->
-        <!--        </div>-->
-        <!--        <div class="box-skill">-->
-        <!--            <i class="fas fa-mobile-alt"></i>-->
-        <!--            <h3>Responsive</h3>-->
-        <!--        </div>-->
-        <!--        <div class="box-skill">-->
-        <!--            <i class="fas fa-rocket"></i>-->
-        <!--            <h3>Dynamic</h3>-->
-        <!--        </div>-->
-        <!--    </div>-->
-
-        <!--    <div class="skills">-->
-        <!--    <div class="about-profile">-->
-        <!--        <div class="foto2"></div>-->
-
-        <!--        <a href="resources/images/my_resume.pdf" download>-->
-        <!--            <div class="submit-btn">read more about me</div>-->
-        <!--        </a>-->
-
-        <!--      </div>-->
-        <!--  </div>-->
-
 
         <div class="skills--bar__wrapper">
             <p>React</p>
@@ -220,11 +152,6 @@
             </div>
 
             <p>JavaScript</p>
-            <div class="container-skill">
-                <div class="skill js">65%</div>
-            </div>
-
-            <p>jQuery</p>
             <div class="container-skill">
                 <div class="skill js">65%</div>
             </div>
@@ -253,12 +180,6 @@
             <div class="container-skill">
                 <div class="skill angular">10%</div>
             </div>
-
-            <p>WordPress</p>
-            <div class="container-skill">
-                <div class="skill angular">10%</div>
-            </div>
-            
             <p>UI Design</p>
             <div class="container-skill">
                 <div class="skill sass">40%</div>
@@ -271,130 +192,9 @@
     <!--portfolio-->
     <main id="portfolio" class="portfolio--section__wrapper">
         <h2 class="portfolio--section__title">SOME OF MY PROJECTS</h2>
-        <!--        first project ditec-->
+
         <div class="portfolio--content__wrapper">
-            <h3 class="portfolio--content__title">Redesign and development of "IT company" Website</h3>
-            <div class="portfolio--card-and-text">
-                <a href="http://ditec-solutions-front-page.tania-m.com" target="_blank">
-                    <div class="portfolio--card">
-                        <div class="portfolio--card__frame portfolio--card__frame-left">
-                            <div class="portfolio--card__content portfolio--card__content-left">
-                                <img src="resources/images/it.jpg" alt="picture of 3d printer">
-                            </div>
-                        </div>
-                    </div>
-                </a>
-                <div>
-                    <p class="portfolio--text">  HTML, CSS and JavaScript. <br><br><br>
-                    </p>
-
-                    <form style="display: inline" action="http://ditec-solutions-front-page.tania-m.com" method="get" target="_blank">
-                        <button class="portfolio--view-detail-btn">
-                            VIEW DETAILS
-                            <i class="fas fa-angle-double-right btn-arrow"></i>
-                        </button>
-                    </form>
-
-                </div>
-            </div>
-
-        </div>
-        <!--       end of first project-->
-
-
-        <!--        second project epoxy floor-->
-        <div class="portfolio--content__wrapper">
-
-            <h3 class="portfolio--content__title">Design and development "Epoxy Floor" Website</h3>
-            <div class="portfolio--card-and-text portfolio--card-and-text__right">
-                <a href="http://floor.test-domain.host" target="_blank">
-                    <div class="portfolio--card">
-                        <div class="portfolio--card__frame portfolio--card__frame-right">
-                            <div class="portfolio--card__content portfolio--card__content-right">
-                                <img src="resources/images/0101.jpg" alt="picture of car racing">
-                            </div>
-                        </div>
-                    </div>
-                </a>
-                <div>
-                    <p class="portfolio--text"> HTML, CSS and JavaScript.<br><br><br>
-                    </p>
-
-                    <form style="display: inline" action="http://floor.test-domain.host" method="get" target="_blank">
-                        <button class="portfolio--view-detail-btn">
-                            VIEW DETAILS
-                            <i class="fas fa-angle-double-right btn-arrow"></i>
-                        </button>
-                    </form>
-                </div>
-            </div>
-
-        </div>
-        <!--   end of     second project-->
-
-        <!--        3 project roof painting-->
-        <div class="portfolio--content__wrapper">
-            <h3 class="portfolio--content__title">Design and development of "Roof Painting" Website</h3>
-            <div class="portfolio--card-and-text">
-                <a href="http://roof.test-domain.host" target="_blank">
-                    <div class="portfolio--card">
-                        <div class="portfolio--card__frame portfolio--card__frame-left">
-                            <div class="portfolio--card__content portfolio--card__content-left">
-                                <img src="resources/images/roof.jpg" alt="picture of 3d printer">
-                            </div>
-                        </div>
-                    </div>
-                </a>
-                <div>
-                    <p class="portfolio--text">  HTML, CSS and JavaScript. <br><br><br>
-                    </p>
-
-                    <form style="display: inline" action="http://roof.test-domain.host" method="get" target="_blank">
-                        <button class="portfolio--view-detail-btn">
-                            VIEW DETAILS
-                            <i class="fas fa-angle-double-right btn-arrow"></i>
-                        </button>
-                    </form>
-
-                </div>
-            </div>
-
-        </div>
-        <!--       end of 3 project-->
-
-
-        <!--        4 project  ivan school-->
-        <div class="portfolio--content__wrapper">
-
-            <h3 class="portfolio--content__title">Design and development "Ivan School" Website</h3>
-            <div class="portfolio--card-and-text portfolio--card-and-text__right">
-                <a href="http://school.tania-m.com" target="_blank">
-                    <div class="portfolio--card">
-                        <div class="portfolio--card__frame portfolio--card__frame-right">
-                            <div class="portfolio--card__content portfolio--card__content-right">
-                                <img src="resources/images/school.jpg" alt="picture of car racing">
-                            </div>
-                        </div>
-                    </div>
-                </a>
-                <div>
-                    <p class="portfolio--text"> Bootstrap and React.<br><br><br>
-                    </p>
-
-                    <form style="display: inline" action="http://school.tania-m.com" method="get" target="_blank">
-                        <button class="portfolio--view-detail-btn">
-                            VIEW DETAILS
-                            <i class="fas fa-angle-double-right btn-arrow"></i>
-                        </button>
-                    </form>
-                </div>
-            </div>
-
-        </div>
-
-
-            <!--        5 project  3d printer-->
-        <div class="portfolio--content__wrapper">
+            <!--        first project-->
             <h3 class="portfolio--content__title">3D printers Website</h3>
             <div class="portfolio--card-and-text">
                 <a href="printer.html">
@@ -407,7 +207,7 @@
                     </div>
                 </a>
                 <div>
-                    <p class="portfolio--text"> HTML, CSS and JavaScript. <br><br><br>
+                    <p class="portfolio--text">Project based on HTML, CSS and JavaScript. <br><br><br>
                     </p>
 
                     <form style="display: inline" action="printer.html" method="get">
@@ -421,11 +221,11 @@
             </div>
 
         </div>
-        <!--       end of 5project-->
+        <!--       end of first project-->
 
 
         <div class="portfolio--content__wrapper">
-            <!--       6 project-->
+            <!--        second project-->
 
             <h3 class="portfolio--content__title">Car Game</h3>
             <div class="portfolio--card-and-text portfolio--card-and-text__right">
@@ -439,7 +239,7 @@
                     </div>
                 </a>
                 <div>
-                    <p class="portfolio--text"> HTML, CSS and JavaScript.<br><br><br>
+                    <p class="portfolio--text">Project based on HTML, CSS and JavaScript.<br><br><br>
                     </p>
 
                     <form style="display: inline" action="car_game.html" method="get">
@@ -452,9 +252,9 @@
             </div>
 
         </div>
-        <!--       end of 6 project-->
+        <!--       end of second project-->
         <div class="portfolio--content__wrapper">
-            <!--        7project-->
+            <!--        third project-->
 
             <h3 class="portfolio--content__title">Relaxer App</h3>
             <div class="portfolio--card-and-text">
@@ -468,7 +268,7 @@
                     </div>
                 </a>
                 <div>
-                    <p class="portfolio--text"> HTML, CSS and JavaScript.<br><br><br>
+                    <p class="portfolio--text">Project based on HTML, CSS and JavaScript.<br><br><br>
                     </p>
                     <form style="display: inline" action="relaxer.html" method="get">
                         <button class="portfolio--view-detail-btn">
@@ -480,9 +280,9 @@
             </div>
 
         </div>
-        <!--       end of7 project-->
+        <!--       end of third project-->
         <div class="portfolio--content__wrapper">
-            <!--       8 project-->
+            <!--        fourth project-->
 
             <h3 class="portfolio--content__title">Tic-tac-toe</h3>
             <div class="portfolio--card-and-text portfolio--card-and-text__right">
@@ -496,7 +296,7 @@
                     </div>
                 </a>
                 <div>
-                    <p class="portfolio--text">HTML, CSS and JavaScript.<br><br><br>
+                    <p class="portfolio--text">Project based on HTML, CSS and JavaScript.<br><br><br>
                     </p>
                     <form style="display: inline" action="tic-tac-toe.html" method="get">
                         <button class="portfolio--view-detail-btn">
@@ -508,11 +308,11 @@
             </div>
 
         </div>
-        <!--       8 project-->
+        <!--       end of fourth project-->
 
 
         <div class="portfolio--content__wrapper">
-            <!--       9 project-->
+            <!--        5th project-->
 
             <h3 class="portfolio--content__title">Bootstrap Website</h3>
             <div class="portfolio--card-and-text">
@@ -526,7 +326,7 @@
                     </div>
                 </a>
                 <div>
-                    <p class="portfolio--text"> HTML and Bootstrap<br><br><br>
+                    <p class="portfolio--text">Project based on HTML and Bootstrap<br><br><br>
                     </p>
                     <form style="display: inline" action="boptstrap.html" method="get">
                         <button class="portfolio--view-detail-btn" formtarget="_blank">
@@ -538,7 +338,7 @@
             </div>
 
         </div>
-        <!--       end of 9 project-->
+        <!--       end of 5 project-->
 
 
     </main>
@@ -668,7 +468,6 @@
 
 
     <footer>
-        <!--    <div class="new-year-count"></div>-->
         <div class="footer__block">
             <div class="copyright-text">
                 <p>Copyright &copy; 2020 Tetiana Murashova. All Rights Reserved</p>
@@ -679,9 +478,6 @@
             </div>
         </div>
     </footer>
-
-
-
 
 </body>
 

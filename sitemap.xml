@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://tania-m.com/</loc>
+  <lastmod>2020-06-30T09:06:16+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://tania-m.com/index.html</loc>
+  <lastmod>2020-06-30T09:06:16+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://tania-m.com/resources/images/my_resume.pdf</loc>
+  <lastmod>2020-06-22T04:02:32+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://tania-m.com/printer.html</loc>
+  <lastmod>2020-06-30T09:23:39+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://tania-m.com/car_game.html</loc>
+  <lastmod>2020-06-30T09:23:07+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://tania-m.com/relaxer.html</loc>
+  <lastmod>2020-06-30T09:23:54+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://tania-m.com/tic-tac-toe.html</loc>
+  <lastmod>2020-06-30T09:24:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://tania-m.com/boptstrap.html</loc>
+  <lastmod>2020-06-30T09:10:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+
+
+</urlset>
